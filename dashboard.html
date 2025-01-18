@@ -1,111 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Admin - Mikromovilab</title>
+    
+    <!-- Enlace a la hoja de estilo externa -->
     <link rel="stylesheet" href="/estilos/styless.css">
 </head>
 <body>
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Barra lateral de navegación -->
         <aside class="sidebar">
+            <!-- Logo de la aplicación -->
             <div class="logo">
                 <img src="./imagenes/logo.png" alt="Mikromovilab Logo">
             </div>
+
+            <!-- Menú de navegación -->
             <nav>
                 <ul>
-                    <li data-page="dashboard.html">📊 Dashboard</li>
-                    <li data-page="usuario.html">👤 Usuario</li>
-                    <li data-page="estaciones.html">📍 Estaciones</li>
-                    <li data-page="bicicletas.html">🚴 Bicicletas</li>
-                    <li data-page="mantenimiento.html">🛠️ Mantenimiento</li>
-                    <li data-page="beacons.html">📡 Beacons</li>
-                    <li data-page="alquiler.html">📜 Alquiler</li>
-                    <li data-page="inventario.html">📦 Inventario</li>
-                    <li data-page="index.html">👥 Personal</li>
+                    <li data-page="dashboard.html">📊 Dashboard</li> <!-- Enlace al panel de control -->
+                    <li data-page="usuario.html">👤 Usuario</li> <!-- Enlace a la gestión de usuarios -->
+                    <li data-page="estaciones.html">📍 Estaciones</li> <!-- Enlace a las estaciones -->
+                    <li data-page="bicicletas.html">🚴 Bicicletas</li> <!-- Enlace a la gestión de bicicletas -->
+                    <li data-page="mantenimiento.html">🛠️ Mantenimiento</li> <!-- Enlace a mantenimiento -->
+                    <li data-page="beacons.html">📡 Beacons</li> <!-- Enlace a la gestión de beacons -->
+                    <li data-page="alquiler.html">📜 Alquiler</li> <!-- Enlace a los registros de alquiler -->
+                    <li data-page="inventario.html">📦 Inventario</li> <!-- Enlace al inventario -->
+                    <li data-page="index.html">👥 Personal</li> <!-- Enlace a la gestión de personal -->
                 </ul>
             </nav>
         </aside>
+
+        <!-- Contenido principal -->
         <main class="content">
+            <!-- Barra superior con el menú y la búsqueda -->
             <header class="top-bar">
+                <!-- Botón para mostrar/ocultar el menú lateral -->
                 <button id="menu-toggle" class="menu-toggle">☰</button>
+                <!-- Campo de búsqueda -->
                 <input type="text" placeholder="Enter keyword">
+                <!-- Información del usuario actual -->
                 <div class="user-info">
                     <img src="./imagenes/user-avatar.png" alt="User Avatar">
                     <span>Adam Schwartz</span>
                 </div>
             </header>
+
+            <!-- Encabezado de la página -->
             <div class="header-a">
                 <h1>Estación La Carolina</h1>
             </div>
-    
+
+            <!-- Sección de estadísticas -->
             <div class="statistics-a">
+                <!-- Gráfica principal -->
                 <div class="chart">
                     <img src="./imagenes/caroli.jpeg" alt="Estadística de la estación" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 </div>
-            
-               
-                
-    
+
+                <!-- Información detallada de la estación -->
                 <div class="info">
+                    <!-- Nombre de la estación -->
                     <div class="info-box">
                         <img src="./imagenes/estaciones.jpeg" alt="Estación">
                         <p><strong>Nombre de la Estación:</strong> La Carolina</p>
-                        <div class="menu">
-                         
-                        </div>
                     </div>
+                    <!-- Color característico de la estación -->
                     <div class="info-box">
                         <img src="./imagenes/colore.jpeg" alt="Color">
                         <p><strong>Color Característico:</strong> Azul</p>
-                        <div class="menu">
-                       
-                        </div>
                     </div>
+                    <!-- Total de alquileres realizados en esta estación -->
                     <div class="info-box">
                         <img src="./imagenes/alquileres.jpeg" alt="Alquileres">
                         <p><strong>Total de Alquileres:</strong> 43 Alquileres</p>
-                        <div class="menu">
-                          
-                        </div>
                     </div>
+                    <!-- Cantidad de beacons disponibles en la estación -->
                     <div class="info-box">
                         <img src="./imagenes/bici.jpeg" alt="Beacons">
                         <p><strong>Beacons en la Estación:</strong> 2 Beacons</p>
-                        <div class="menu">
-                          
-                        </div>
                     </div>
+                    <!-- Total de alertas registradas en la estación -->
                     <div class="info-box">
                         <img src="./imagenes/alerta.png" alt="Alertas">
                         <p><strong>Total de Alertas:</strong> 7 Alertas</p>
-                        <div class="menu">
-                       
-                        </div>
                     </div>
+                    <!-- Número total de bicicletas en la estación -->
                     <div class="info-box">
                         <img src="./imagenes/bici.jpeg" alt="Bicicletas">
                         <p><strong>Número de Bicicletas:</strong> 45 Bicicletas</p>
-                        <div class="menu">
-                        
-                        </div>
                     </div>
+                    <!-- Número de mantenimientos realizados -->
                     <div class="info-box">
                         <img src="./imagenes/mantenimiento.jpeg" alt="Mantenimiento">
                         <p><strong># Mantenimientos:</strong> 8 Mantenimientos</p>
-                        <div class="menu">
-                          
-                        </div>
                     </div>
                 </div>
             </div>
-            
-    
-        
         </main>
+
+        <!-- Enlace al archivo JavaScript externo -->
         <script src="script.js"></script>
     </div>
-    
-   
 </body>
 </html>

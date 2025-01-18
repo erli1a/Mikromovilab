@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
+    <!-- Enlace al archivo de estilos externos -->
     <link rel="stylesheet" href="/estilos/styless.css">
 </head>
 <body>
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Barra lateral de navegación -->
         <aside class="sidebar">
             <div class="logo">
+                <!-- Logo de la aplicación -->
                 <img src="/imagenes/logo.png" alt="Mikromovilab Logo">
             </div>
             <nav>
+                <!-- Menú de navegación con enlaces a diferentes secciones -->
                 <ul>
                     <li data-page="dashboard.html">📊 Dashboard</li>
                     <li data-page="usuario.html">👤 Usuario</li>
@@ -26,20 +32,30 @@
                 </ul>
             </nav>
         </aside>
+
+        <!-- Contenido principal -->
         <main class="content">
+            <!-- Barra superior con búsqueda y perfil de usuario -->
             <header class="top-bar">
                 <button id="menu-toggle" class="menu-toggle">☰</button>
                 <input type="text" placeholder="Enter keyword">
                 <div class="user-info">
+                    <!-- Información del usuario -->
                     <img src="/imagenes/user-avatar.png" alt="User Avatar">
                     <span>Adam Schwartz</span>
                 </div>
             </header>
+
+            <!-- Sección de administración de inventario -->
             <section class="user-admin">
                 <h1>Inventario</h1>
+
+                <!-- Barra de búsqueda -->
                 <div class="search-bar">
                     <input type="text" placeholder="Buscar por nombre">
                 </div>
+
+                <!-- Tabla de inventario total de bicicletas -->
                 <h3>Total de bicicletas</h3>
                 <table>
                     <thead>
@@ -48,167 +64,94 @@
                             <th>Id</th>
                             <th>Marca de bicicleta</th>
                             <th>Total de bicicletas</th>
-                            <th>Esatado de bicicleta</th>
+                            <th>Estado de bicicleta</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Filas de ejemplo para los datos del inventario -->
                         <tr>
                             <td><input type="checkbox"></td>
                             <td>1</td>
                             <td>Bicicleta Eléctrica</td>
                             <td>100</td>
                             <td>Buen Estado</td>
-                         
                             <td class="actions">
-                              <button class="edit">✏️ Editar</button>
-                              <button class="delete">🗑️ Eliminar</button>
-                          </td>
+                                <button class="edit">✏️ Editar</button>
+                                <button class="delete">🗑️ Eliminar</button>
+                            </td>
                         </tr>
-                        <tr>
-                          <td><input type="checkbox"></td>
-                          <td>1</td>
-                          <td>Bicicleta Eléctrica</td>
-                          <td>100</td>
-                          <td>Buen Estado</td>
-                       
-                          <td class="actions">
-                            <button class="edit">✏️ Editar</button>
-                            <button class="delete">🗑️ Eliminar</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox"></td>
-                        <td>1</td>
-                        <td>Bicicleta Eléctrica</td>
-                        <td>100</td>
-                        <td>Buen Estado</td>
-                     
-                        <td class="actions">
-                          <button class="edit">✏️ Editar</button>
-                          <button class="delete">🗑️ Eliminar</button>
-                      </td>
-                    </tr>
-                        
+                        <!-- Repetir filas según sea necesario -->
                     </tbody>
                 </table>
+
+                <!-- Tabla de bicicletas alquiladas -->
                 <br>
                 <h3>Bicicletas Alquiladas</h3>
                 <table>
-                  <thead>
-                      <tr>
-                          <th></th>
-                          <th>Id</th>
-                          <th>Tipo de bicicleta</th>
-                          <th>Cliente</th>
-                          <th>Fecha de alquilada</th>
-                          <th>Bicicletas disponibles</th>
-                          <th>Bicicletas en uso</th>
-                          <th>Acciones</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td><input type="checkbox"></td>
-                          <td>1</td>
-                          <td>Bicicleta Eléctrica</td>
-                          <td>Pedro Jimenez</td>
-                          <td>10-12-2024</td>
-                          <td>60</td>
-                          <td>40</td>
-                       
-                          <td class="actions">
-                            <button class="edit">✏️ Editar</button>
-                            <button class="delete">🗑️ Eliminar</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox"></td>
-                          <td>1</td>
-                          <td>Bicicleta Eléctrica</td>
-                          <td>Pedro Jimenez</td>
-                          <td>10-12-2024</td>
-                          <td>60</td>
-                          <td>40</td>
-                     
-                          <td class="actions">
-                            <button class="edit">✏️ Editar</button>
-                            <button class="delete">🗑️ Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td>1</td>
-                      <td>Bicicleta Eléctrica</td>
-                      <td>Pedro Jimenez</td>
-                      <td>10-12-2024</td>
-                      <td>60</td>
-                      <td>40</td>
-                   
-                      <td class="actions">
-                        <button class="edit">✏️ Editar</button>
-                        <button class="delete">🗑️ Eliminar</button>
-                    </td>
-                  </tr>
-                      
-                  </tbody>
-              </table>
-              <br>
-              <h3>Mantenimiento</h3>
-              <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Id</th>
-                        <th>Tipo de bicicleta</th>
-                        <th>Mecánico</th>
-                        <th>Fecha de entrega</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>1</td>
-                        <td>Bicicleta Eléctrica</td>
-                        <td>Martin Jimenez</td>
-                        <td>10-12-2025</td>
-                       
-                     
-                        <td class="actions">
-                          <button class="edit">✏️ Editar</button>
-                          <button class="delete">🗑️ Eliminar</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                        <td>1</td>
-                        <td>Bicicleta Eléctrica</td>
-                        <td>Pedro Jimenez</td>
-                        <td>10-12-2024</td>
-                        
-                   
-                        <td class="actions">
-                          <button class="edit">✏️ Editar</button>
-                          <button class="delete">🗑️ Eliminar</button>
-                      </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td>1</td>
-                    <td>Bicicleta Eléctrica</td>
-                    <td>Pedro Jimenez</td>
-                    <td>10-12-2024</td>
-                    
-                 
-                    <td class="actions">
-                      <button class="edit">✏️ Editar</button>
-                      <button class="delete">🗑️ Eliminar</button>
-                  </td>
-                </tr>
-                    
-                </tbody>
-            </table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Id</th>
+                            <th>Tipo de bicicleta</th>
+                            <th>Cliente</th>
+                            <th>Fecha de alquilada</th>
+                            <th>Bicicletas disponibles</th>
+                            <th>Bicicletas en uso</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas de ejemplo para los datos de bicicletas alquiladas -->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>Bicicleta Eléctrica</td>
+                            <td>Pedro Jimenez</td>
+                            <td>10-12-2024</td>
+                            <td>60</td>
+                            <td>40</td>
+                            <td class="actions">
+                                <button class="edit">✏️ Editar</button>
+                                <button class="delete">🗑️ Eliminar</button>
+                            </td>
+                        </tr>
+                        <!-- Repetir filas según sea necesario -->
+                    </tbody>
+                </table>
+
+                <!-- Tabla de bicicletas en mantenimiento -->
+                <br>
+                <h3>Mantenimiento</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Id</th>
+                            <th>Tipo de bicicleta</th>
+                            <th>Mecánico</th>
+                            <th>Fecha de entrega</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas de ejemplo para los datos de mantenimiento -->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>Bicicleta Eléctrica</td>
+                            <td>Martin Jimenez</td>
+                            <td>10-12-2025</td>
+                            <td class="actions">
+                                <button class="edit">✏️ Editar</button>
+                                <button class="delete">🗑️ Eliminar</button>
+                            </td>
+                        </tr>
+                        <!-- Repetir filas según sea necesario -->
+                    </tbody>
+                </table>
+
+                <!-- Paginación de los resultados -->
                 <div class="pagination">
                     <span>2 resultados encontrados | Mostrando página 1 de 100</span>
                     <button>Previous</button>
@@ -217,29 +160,29 @@
                     <button>Next</button>
                 </div>
             </section>
-        
         </main>
-        
     </div>
+
+    <!-- Modal para editar información -->
     <div id="edit-modal" class="modal">
-      <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <h2>Editar Información</h2>
-          <form id="edit-form">
-              <label for="edit-id">ID:</label>
-              <input type="text" id="edit-id" disabled>
-              <label for="edit-name">Marca de bicicleta:</label>
-              <input type="text" id="edit-name" required>
-              <label for="edit-total">Total de bicicletas:</label>
-              <input type="number" id="edit-total" required>
-              <label for="edit-status">Estado:</label>
-              <input type="text" id="edit-status" required>
-              <button type="submit">Guardar</button>
-          </form>
-      </div>
-  </div>
-  
-    
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Editar Información</h2>
+            <form id="edit-form">
+                <label for="edit-id">ID:</label>
+                <input type="text" id="edit-id" disabled>
+                <label for="edit-name">Marca de bicicleta:</label>
+                <input type="text" id="edit-name" required>
+                <label for="edit-total">Total de bicicletas:</label>
+                <input type="number" id="edit-total" required>
+                <label for="edit-status">Estado:</label>
+                <input type="text" id="edit-status" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Archivo JavaScript para funcionalidad interactiva -->
     <script src="script.js"></script>
 </body>
 </html>
