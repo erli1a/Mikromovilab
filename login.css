@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: linear-gradient(to top, #55a388, #ffffff);
     
 }
 
@@ -22,7 +23,7 @@ body {
     max-width: 600px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     position: relative;
 }

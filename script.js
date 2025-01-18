@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     table.addEventListener("click", (event) => {
         const target = event.target;
 
-        if (target.textContent === "✏️") {
+        if (target.textContent === "✏️" || target.textContent ==="✏️ Editar" ) {
             // Open modal for editing
             modal.style.display = "block";
             currentRow = target.closest("tr");

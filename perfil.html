@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios</title>
+    <title>Perfil de Usuario</title>
     <link rel="stylesheet" href="styless.css">
 </head>
 <body>
@@ -14,60 +14,52 @@
             </div>
             <nav>
                 <ul>
-                    <li data-page="dashboard.html">Dashboard</li>
-                    <li data-page="usuario.html">Usuario</li>
-                    <li data-page="estaciones.html">Estaciones</li>
-                    <li data-page="bicicletas.html">Bicicletas</li>
-                    <li data-page="mantenimiento.html">Mantenimiento</li>
-                    <li data-page="beacons.html">Beacons</li>
-                    <li data-page="alquiler.html">Alquiler</li>
-                    <li data-page="inventario.html">Inventario</li>
-                    <li data-page="index.html">Personal</li>
+                    <li data-page="dashboard.html">📊 Dashboard</li>
+                    <li data-page="usuario.html">👤 Usuario</li>
+                    <li data-page="estaciones.html">📍 Estaciones</li>
+                    <li data-page="bicicletas.html">🚴 Bicicletas</li>
+                    <li data-page="mantenimiento.html">🛠️ Mantenimiento</li>
+                    <li data-page="beacons.html">📡 Beacons</li>
+                    <li data-page="alquiler.html">📜 Alquiler</li>
+                    <li data-page="inventario.html">📦 Inventario</li>
+                    <li data-page="index.html">👥 Personal</li>
                 </ul>
             </nav>
         </aside>
         <main class="content">
             <header class="top-bar">
                 <button id="menu-toggle" class="menu-toggle">☰</button>
-                <input type="text" placeholder="Enter keyword">
+                <input type="text" placeholder="Buscar">
                 <div class="user-info">
                     <img src="/imagenes/user-avatar.png" alt="User Avatar">
                     <span>Adam Schwartz</span>
                 </div>
             </header>
-            <section class="user-admin">
-                <h1>Usuarios</h1>
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscar por nombre">
-                </div>
-                <div class="user-cards" id="userCards">
-                    <!-- Tarjeta de usuario Andrés Moya -->
-                    <div class="user-card" data-id="1754702856">
-                        <div class="user-info">
-                            <h3>Andrés Moya</h3>
-                            <p>Email: andres.moya@gmail.com</p>
-                            <p>No. de celular: 0981239989</p>
-                            <p>Fecha de nacimiento: 1995-08-22</p>
-                            <p>Estado: <input type="checkbox" checked></p>
-                            <div class="actions">
-                                <button class="edit">✏️ Editar</button>
-                                <button class="delete">🗑️ Eliminar</button>
-                            </div>
-                        </div>
-                        <!-- Imagen al lado derecho -->
-                        <img src="./imagenes/persona1.jpeg" alt="Imagen de usuario">
+            <section class="user-profile">
+                <h1>Perfil del Usuario</h1>
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <img src="./imagenes/persona1.jpeg" alt="Foto del Usuario">
+                        <h2>Andrés Moya</h2>
+                        <p>ID: 1754702856</p>
                     </div>
-                    <!-- Tarjeta de usuario Pedro Gomez -->
-                    
+                    <div class="profile-details">
+                        <p><strong>Email:</strong> andres.moya@gmail.com</p>
+                        <p><strong>No. de celular:</strong> 0981239989</p>
+                        <p><strong>Fecha de nacimiento:</strong> 1995-08-22</p>
+                        <p><strong>Estado:</strong> 
+                            <input type="checkbox" id="user-status" checked>
+                            <label for="user-status">Activo</label>
+                        </p>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="edit">✏️ Editar</button>
+                        <button class="delete">🗑️ Eliminar</button>
+                    </div>
                 </div>
             </section>
-        
         </main>
-        
     </div>
-
-  
-    
     <script src="script.js"></script>
 </body>
 </html>

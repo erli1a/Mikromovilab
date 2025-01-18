@@ -8,39 +8,51 @@
 </head>
 <body>
     <div class="container">
+        <!-- Sidebar with navigation links -->
         <aside class="sidebar">
             <div class="logo">
+                <!-- Logo image -->
                 <img src="/imagenes/logo.png" alt="Mikromovilab Logo">
             </div>
             <nav>
                 <ul>
-                    <li data-page="dashboard.html">Dashboard</li>
-                    <li data-page="usuario.html">Usuario</li>
-                    <li data-page="estaciones.html">Estaciones</li>
-                    <li data-page="bicicletas.html">Bicicletas</li>
-                    <li data-page="mantenimiento.html">Mantenimiento</li>
-                    <li data-page="beacons.html">Beacons</li>
-                    <li data-page="alquiler.html">Alquiler</li>
-                    <li data-page="inventario.html">Inventario</li>
-                    <li data-page="index.html">Personal</li>
+                    <!-- Navigation links for different sections -->
+                    <li data-page="dashboard.html">📊 Dashboard</li>
+                    <li data-page="usuario.html">👤 Usuario</li>
+                    <li data-page="estaciones.html">📍 Estaciones</li>
+                    <li data-page="bicicletas.html">🚴 Bicicletas</li>
+                    <li data-page="mantenimiento.html">🛠️ Mantenimiento</li>
+                    <li data-page="beacons.html">📡 Beacons</li>
+                    <li data-page="alquiler.html">📜 Alquiler</li>
+                    <li data-page="inventario.html">📦 Inventario</li>
+                    <li data-page="index.html">👥 Personal</li>
                 </ul>
             </nav>
         </aside>
+
         <main class="content">
+            <!-- Header with menu toggle, search bar, and user info -->
             <header class="top-bar">
                 <button id="menu-toggle" class="menu-toggle">☰</button>
                 <input type="text" placeholder="Enter keyword">
                 <div class="user-info">
+                    <!-- User avatar and name -->
                     <img src="/imagenes/user-avatar.png" alt="User Avatar">
                     <span>Adam Schwartz</span>
                 </div>
             </header>
+
             <section class="user-admin">
+                <!-- Section title -->
                 <h1>Beacons</h1>
+
+                <!-- Search bar for filtering data -->
                 <div class="search-bar">
                     <input type="text" placeholder="Buscar por nombre">
                 </div>
+
                 <div class="table-container">
+                    <!-- Table displaying beacons data -->
                     <table>
                         <thead>
                             <tr>
@@ -54,6 +66,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Placeholder rows for beacon information -->
                             <tr>
                                 <td><input type="checkbox"></td>
                                 <td>123</td>
@@ -61,12 +74,13 @@
                                 <td>G-4758421</td>
                                 <td>2024-11-08To6:12:23.000Z</td>
                                 <td>85</td>
-                        
                                 <td class="actions">
+                                    <!-- Buttons for editing and deleting records -->
                                     <button class="edit">✏️ Editar</button>
                                     <button class="delete">🗑️ Eliminar</button>
                                 </td>
                             </tr>
+                            <!-- Duplicate rows can be replaced with dynamic data -->
                             <tr>
                                 <td><input type="checkbox"></td>
                                 <td>123</td>
@@ -74,46 +88,6 @@
                                 <td>G-4758421</td>
                                 <td>2024-11-08To6:12:23.000Z</td>
                                 <td>85</td>
-                        
-                                <td class="actions">
-                                    <button class="edit">✏️ Editar</button>
-                                    <button class="delete">🗑️ Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"></td>
-                                <td>123</td>
-                                <td>10-10-2025</td>
-                                <td>G-4758421</td>
-                                <td>2024-11-08To6:12:23.000Z</td>
-                                <td>85</td>
-                        
-                                <td class="actions">
-                                    <button class="edit">✏️ Editar</button>
-                                    <button class="delete">🗑️ Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"></td>
-                                <td>123</td>
-                                <td>10-10-2025</td>
-                                <td>G-4758421</td>
-                                <td>2024-11-08To6:12:23.000Z</td>
-                                <td>85</td>
-                        
-                                <td class="actions">
-                                    <button class="edit">✏️ Editar</button>
-                                    <button class="delete">🗑️ Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"></td>
-                                <td>123</td>
-                                <td>10-10-2025</td>
-                                <td>G-4758421</td>
-                                <td>2024-11-08To6:12:23.000Z</td>
-                                <td>85</td>
-                        
                                 <td class="actions">
                                     <button class="edit">✏️ Editar</button>
                                     <button class="delete">🗑️ Eliminar</button>
@@ -121,23 +95,24 @@
                             </tr>
                         </tbody>
                     </table>
-        
+
+                    <!-- Results summary and pagination placeholder -->
                     <div class="results">
                         <p>3 resultados encontrados: Mostrando página 1 de 100</p>
                     </div>
                 </div>
                 <br>
-                
             </section>
-        
         </main>
-        
     </div>
+
+    <!-- Modal for editing beacon details -->
     <div id="edit-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Editar Usuario</h2>
             <form id="edit-form">
+                <!-- Input fields for editing user details -->
                 <label for="edit-name">Nombre:</label>
                 <input type="text" id="edit-name" required>
                 <label for="edit-email">Correo Electrónico:</label>
@@ -150,7 +125,8 @@
             </form>
         </div>
     </div>
-    
+
+    <!-- External JavaScript file for additional functionality -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
     <link rel="stylesheet" href="styless.css">
+    <style>
+     
+
+        /* Estilo para el menú desplegable */
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 5px 0;
+            width: 100px;
+            text-align: center;
+            z-index: 10; /* Aseguramos que esté por encima del contenido */
+        }
+
+       
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,15 +36,15 @@
             </div>
             <nav>
                 <ul>
-                    <li data-page="dashboard.html">Dashboard</li>
-                    <li data-page="usuario.html">Usuario</li>
-                    <li data-page="estaciones.html">Estaciones</li>
-                    <li data-page="bicicletas.html">Bicicletas</li>
-                    <li data-page="mantenimiento.html">Mantenimiento</li>
-                    <li data-page="beacons.html">Beacons</li>
-                    <li data-page="alquiler.html">Alquiler</li>
-                    <li data-page="inventario.html">Inventario</li>
-                    <li data-page="index.html">Personal</li>
+                    <li data-page="dashboard.html">📊 Dashboard</li>
+                    <li data-page="usuario.html">👤 Usuario</li>
+                    <li data-page="estaciones.html">📍 Estaciones</li>
+                    <li data-page="bicicletas.html">🚴 Bicicletas</li>
+                    <li data-page="mantenimiento.html">🛠️ Mantenimiento</li>
+                    <li data-page="beacons.html">📡 Beacons</li>
+                    <li data-page="alquiler.html">📜 Alquiler</li>
+                    <li data-page="inventario.html">📦 Inventario</li>
+                    <li data-page="index.html">👥 Personal</li>
                 </ul>
             </nav>
         </aside>
@@ -33,6 +55,11 @@
                 <div class="user-info">
                     <img src="/imagenes/user-avatar.png" alt="User Avatar">
                     <span>Adam Schwartz</span>
+                    <!-- Menú desplegable -->
+                    <div class="user-dropdown">
+                        <a href="#">Perfil</a>
+                        <a href="#">Salir</a>
+                    </div>
                 </div>
             </header>
             <section class="user-admin">
@@ -54,7 +81,6 @@
                                 <button class="delete">🗑️ Eliminar</button>
                             </div>
                         </div>
-                        <!-- Imagen al lado derecho -->
                         <img src="./imagenes/persona1.jpeg" alt="Imagen de usuario">
                     </div>
                     <!-- Tarjeta de usuario Pedro Gomez -->
@@ -70,7 +96,6 @@
                                 <button class="delete">🗑️ Eliminar</button>
                             </div>
                         </div>
-                        <!-- Imagen al lado derecho -->
                         <img src="./imagenes/persona2.jpeg" alt="Imagen de usuario">
                     </div>
                     <!-- Tarjeta de usuario Jose Saenz -->
@@ -86,7 +111,6 @@
                                 <button class="delete">🗑️ Eliminar</button>
                             </div>
                         </div>
-                        <!-- Imagen al lado derecho -->
                         <img src="./imagenes/persona3.jpg" alt="Imagen de usuario">
                     </div>
                     <!-- Tarjeta de usuario Marcos Gomez -->
@@ -102,15 +126,44 @@
                                 <button class="delete">🗑️ Eliminar</button>
                             </div>
                         </div>
-                        <!-- Imagen al lado derecho -->
                         <img src="./imagenes/persona4.jpeg" alt="Imagen de usuario">
+                    </div>
+                    <!-- Tarjeta de usuario Maria Fernandez -->
+                    <div class="user-card" data-id="1754702860">
+                        <div class="user-info">
+                            <h3>Maria Fernandez</h3>
+                            <p>Email: maria.fernandez@gmail.com</p>
+                            <p>No. de celular: 0981239990</p>
+                            <p>Fecha de nacimiento: 1994-05-10</p>
+                            <p>Estado: <input type="checkbox" checked></p>
+                            <div class="actions">
+                                <button class="edit">✏️ Editar</button>
+                                <button class="delete">🗑️ Eliminar</button>
+                            </div>
+                        </div>
+                        <img src="./imagenes/persona5.jpg" alt="Imagen de usuario">
+                    </div>
+                    <!-- Tarjeta de usuario Laura Perez -->
+                    <div class="user-card" data-id="1754702861">
+                        <div class="user-info">
+                            <h3>Laura Perez</h3>
+                            <p>Email: laura.perez@gmail.com</p>
+                            <p>No. de celular: 0981239991</p>
+                            <p>Fecha de nacimiento: 1993-04-15</p>
+                            <p>Estado: <input type="checkbox" checked></p>
+                            <div class="actions">
+                                <button class="edit">✏️ Editar</button>
+                                <button class="delete">🗑️ Eliminar</button>
+                            </div>
+                        </div>
+                        <img src="./imagenes/persona6.jpg" alt="Imagen de usuario">
                     </div>
                 </div>
             </section>
-        
         </main>
-        
     </div>
+
+    <!-- Modal de edición de usuario -->
     <div id="editModal" class="modal" style="display: none;">
         <div class="modal-content">
             <h2>Editar Usuario</h2>
@@ -132,8 +185,7 @@
             </form>
         </div>
     </div>
-  
-    
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -81,10 +81,11 @@ body {
     padding: 0;
     width: 100%;
     text-decoration: none;
+    margin: 0;
 }
 
 .sidebar nav ul li {
-    padding: 15px;
+    padding: 10px 15px;
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -97,7 +98,36 @@ body {
     background: #0a9396;
 }
 
-/* Content */
+/* Content .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sidebar nav ul li:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .sidebar nav ul li::before {
+            content: attr(data-icon);
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .sidebar {
+            background-color: #f8f9fa;
+        }*/
 .content {
     flex-grow: 1;
     display: flex;
@@ -230,57 +260,114 @@ table td {
 }
 
 /* modal*/
+/* Modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y menos opaco */
     text-align: center;
+    padding: 50px 15px; /* Espaciado adicional */
 }
 
-.modal input {
-    border-radius: 2px;
-    width: 100 px;
-    height: 25px;
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Centro el modal con más espacio desde arriba */
+    padding: 30px;
+    border-radius: 8px;
+    width: 40%;
+    height: auto;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    animation: fadeIn 0.3s ease-out; /* Animación de aparición */
 }
 
-#edit-form {
+/* Modal Header */
+.modal-header {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.close-button {
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #333; /* Color al pasar el mouse */
+}
+
+/* Input Fields */
+.modal input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.modal input:focus {
+    border-color: #00bfa5; /* Color al hacer focus */
+}
+
+/* Modal Buttons */
 .modal button {
-    align-self: center;
-    /* Centra el botón horizontalmente (opcional) */
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #00bfa5;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
-.modal-content {
-    background-color: rgb(255, 255, 255);
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 5px;
-    width: 40%;
-    height: 65%;
+.modal button:hover {
+    background-color: #008e8c; /* Color al pasar el mouse */
 }
 
-.close-button {
-    color: black;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+.modal button:focus {
+    outline: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
 }
 
 /*menu despegable de cerrar y ver pergil*/
